@@ -33,6 +33,19 @@ fun plusMany(vararg numbers: Int) {
     }
 }
 
+//내부 함수(함수안에 함수)
+fun showMyPlus(first: Int, second: Int): Int {
+
+    println(first)
+    println(second)
+
+    fun plus(first: Int, second: Int): Int {
+        return first + second
+    }
+
+    return plus(first, second)
+}
+
 fun main(array: Array<String>) {
     println(plus(3, 4))
     println(plus(first = 10, second = 20))
